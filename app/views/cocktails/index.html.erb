@@ -2,9 +2,9 @@
 
 <ul>
   <% @cocktails.each do |cocktail| %>
-  <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
+  <li><%= link_to cocktail.name, cocktail_path(cocktail) %> | <%= link_to "Delete Cocktail", cocktail_path(cocktail), method: :delete %></li>
   <% end %>
 </ul>
 
 
-<%= link_to "Create New Cocktail", new_cocktail_path %>
+<%= link_to "Create New Cocktail", new_cocktail_path, class: "btn btn-primary" %>
