@@ -4,6 +4,7 @@
 <div class="card-container">
   <% @cocktails.each do |cocktail| %>
   <div class="card">
+    <%= image_tag cocktail.photo, alt: "cocktail-image" %>
     <h5>
       <%= link_to cocktail.name, cocktail_path(cocktail) %>
     </h5>
@@ -15,3 +16,6 @@
   <% end %>
 </div>
 
+<div class="create-button">
+  <%= link_to "Create Cocktail", new_cocktail_path %>
+</div>
