@@ -1,10 +1,15 @@
 <h1>Cocktails Index</h1>
 
-<ul>
+<div class="card-container">
   <% @cocktails.each do |cocktail| %>
-  <li><%= link_to cocktail.name, cocktail_path(cocktail) %> | <%= link_to "Delete Cocktail", cocktail_path(cocktail), method: :delete %></li>
+  <div class="card">
+    <h5>
+      <%= link_to cocktail.name, cocktail_path(cocktail) %>
+    </h5>
+    <div class="delete-btn">
+      <%= link_to "Delete", cocktail_path(cocktail), method: :delete %>
+    </div>
+  </div>
   <% end %>
-</ul>
+</div>
 
-
-<%= link_to "Create New Cocktail", new_cocktail_path, class: "btn btn-primary" %>
