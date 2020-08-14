@@ -1,4 +1,9 @@
-<h1>Cocktails Index</h1>
+<div id="header-banner">
+  <h1>Share your Cocktail recepies!</h1>
+  <div class="create-button">
+    <%= link_to "Create Cocktail", new_cocktail_path %>
+  </div>
+</div>
 
 
 <div class="card-container">
@@ -16,6 +21,3 @@
   <% end %>
 </div>
 
-<div class="create-button">
-  <%= link_to "Create Cocktail", new_cocktail_path %>
-</div>
